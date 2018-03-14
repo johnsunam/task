@@ -14,7 +14,7 @@ class Categories extends Component {
                     <ModalComponent placeholder={"Enter category name..."} addCategory={this.props.addCategory} />
                     <Row style={{ padding: 24, minHeight: 500 }} gutter={16}>
                         {this.props.categories.map( (category, key) => <Col key={key} span={4}>
-                            <Link to="/category"  >
+                            <Link to={`/${category.id}`}  >
                                 <Card title={category.name} bordered={false}>
                                     Items: {category.items}
                                 </Card>
